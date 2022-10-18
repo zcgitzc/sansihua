@@ -15,7 +15,8 @@ import java.util.Arrays;
 public class WechatController {
 
     @GetMapping(value = "/wechat")
-    String get(String signature, String timestamp, String nonce, String echoStr) {
+    public String get(String signature, String timestamp, String nonce, String echoStr) {
+        System.out.println("request in. signature:" + signature + " timestamp:" + timestamp + " echoStr:" + echoStr);
         String token = "dzhcWwJrwSNtVYuicDSftcbpyygiVxgu";
 
         // 对token、timestamp、和nonce按字典排序.
