@@ -23,6 +23,7 @@ public class WechatController {
     }
 
     public static void main(String[] args) {
-        new WechatController().get("4f3c5689fde215c5ad09189dc685a53762a54817", "1666090739", "", "");
+        String res = new WechatController().get("d5befd9ceda3e7d1f5a7856a4ceb4c535cb67636", "1666091493", "1229831236", "");
+        System.out.println(res);
     }
 }
