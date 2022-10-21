@@ -16,11 +16,10 @@ import java.util.Arrays;
 public class WechatController {
 
     @GetMapping(value = "/wechat")
-    public String get(String signature, String timestamp, String nonce, String echoStr) {
-        System.out.println("request in. signature:" + signature + " timestamp:" + timestamp + " nonce:" + nonce + " echoStr:" + echoStr);
-//        boolean check = WxPublicCheckSignature.checkSignature(signature, timestamp, nonce);
-//        return check ? echoStr : "校验失败";
-        return echoStr;
+    public String get(String signature, String timestamp, String nonce, String echostr) {
+        System.out.println("request in. signature:" + signature + " timestamp:" + timestamp + " nonce:" + nonce + " echoStr:" + echostr);
+        boolean check = WxPublicCheckSignature.checkSignature(signature, timestamp, nonce);
+        return check ? echostr : "校验失败";
     }
 
     public static void main(String[] args) {
