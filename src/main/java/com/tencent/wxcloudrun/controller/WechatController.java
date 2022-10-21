@@ -18,12 +18,13 @@ public class WechatController {
     @GetMapping(value = "/wechat")
     public String get(String signature, String timestamp, String nonce, String echoStr) {
         System.out.println("request in. signature:" + signature + " timestamp:" + timestamp + " nonce:" + nonce + " echoStr:" + echoStr);
-        boolean check = WxPublicCheckSignature.checkSignature(signature, timestamp, nonce);
-        return check ? echoStr : "校验失败";
+//        boolean check = WxPublicCheckSignature.checkSignature(signature, timestamp, nonce);
+//        return check ? echoStr : "校验失败";
+        return echoStr;
     }
 
     public static void main(String[] args) {
         String res = new WechatController().get("d5befd9ceda3e7d1f5a7856a4ceb4c535cb67636", "1666091493", "1229831236", "");
-        System.out.println(res);
+        System.out.println("res:" + res);
     }
 }
