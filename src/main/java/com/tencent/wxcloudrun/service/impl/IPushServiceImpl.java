@@ -46,7 +46,7 @@ public class IPushServiceImpl implements IPushService {
         templateMessage.addData(new WxMpTemplateData("high", weather.getHigh() + "", "#bf242a"));
         templateMessage.addData(new WxMpTemplateData("wind_dir", weather.getWind_dir() + "", "#FF6347"));
         templateMessage.addData(new WxMpTemplateData("wind_class", weather.getWind_class() + "", "#FF6347"));
-        templateMessage.addData(new WxMpTemplateData("english", CaiHongPiUtils.getCaiHongPi().get(0), "#FF69B4"));
+        templateMessage.addData(new WxMpTemplateData("static/english", CaiHongPiUtils.getCaiHongPi().get(0), "#FF69B4"));
         templateMessage.addData(new WxMpTemplateData("chinese", CaiHongPiUtils.getCaiHongPi().get(1), "#FF69B4"));
         templateMessage.addData(new WxMpTemplateData("caihongpi", CaiHongPiUtils.getCaiHongPiTianGou().get(0), "#FF69B4"));
         templateMessage.addData(new WxMpTemplateData("lianai", JiNianRiUtils.getLianAi() + "", "#FF1493"));

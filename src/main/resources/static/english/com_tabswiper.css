@@ -1,0 +1,108 @@
+﻿@charset "utf-8";
+.com_tabswiper_box {
+  position: relative;
+  font-size: 12px;
+}
+.com_tabswiper_box .tab_content_box {
+  height: 24px;
+  line-height: 24px;
+  padding-bottom: 5px;
+}
+.com_tabswiper_box  .tab_swiper{
+  position: relative;
+  margin:0;
+}
+.com_tabswiper_box .slide_li {
+  position: relative;
+  float: left;
+  padding: 0 ;
+  margin:0 3px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+.com_tabswiper_box .slide_li.active:after{
+  content: "";
+  position: absolute;
+  bottom:-5px;
+  left:0;
+  right:0;
+  height:5px;
+  background: url(../images/boxTLiAarr.GIF) center top no-repeat; 
+}
+.com_tabswiper_box .nav_itme_fl{
+  display: inline-block;
+  border-width: 1px;
+  border-style:solid;
+  border-color: transparent;
+  border-top: none;
+  border-bottom: none;
+  padding:0 4px;
+
+}
+.com_tabswiper_box .slide_li.active .nav_itme_fl{
+   color:#00749f; 
+   border-right-color:#cecece;
+   border-left-color:#cecece;
+   background: url(../images/boxTLiA.GIF) repeat-x;
+}
+
+.com_tabswiper_box .tab_arrow {
+  display: none;
+}
+
+/* 滚动组件需要的样式 */
+.tab_swiperbox {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.tab_swiperbox .tab_content_box {
+  width: 100%;
+  overflow: hidden;
+}
+.tab_swiperbox .tab_swiper {
+  position: relative;
+}
+.tab_swiperbox .tab_arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 5px;
+  width: 30px;
+  visibility: hidden;
+  display: block;
+}
+.tab_swiperbox .tab_arrow .skin-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13px;
+  height: 9px;
+  margin-top: -4px;
+  margin-left: -6.5px;
+}
+.tab_swiperbox .tab_arrow .skin-iconArrowfl {
+  background-image: url(../images/sprite.tabswriper.png);
+  background-position: -18px 0;
+}
+.tab_swiperbox .tab_arrow .skin-iconArrowfr {
+  background-image: url(../images/sprite.tabswriper.png);
+  background-position: -31px 0;
+}
+.tab_swiperbox .tab_arrow.tab_fr {
+  left: auto;
+  right: 0;
+}
+.tab_swiperbox .tab_arrow.disable {
+  cursor: default;
+  visibility: visible;
+}
+.tab_swiperbox .tab_arrow.disable .skin-iconArrowfl {
+  background-image: url(../images/sprite.tabswriper.png);
+  background-position: -44px 0;
+}
+.tab_swiperbox .tab_arrow.disable .skin-iconArrowfr {
+  background-image: url(../images/sprite.tabswriper.png);
+  background-position: -57px 0;
+}

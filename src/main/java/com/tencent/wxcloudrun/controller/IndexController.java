@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
  * index控制器
  */
 @Controller
-
 public class IndexController {
 
   /**
@@ -17,6 +16,12 @@ public class IndexController {
   @GetMapping
   public String index() {
     return "index";
+  }
+
+
+  @GetMapping("/KCMS/detail/detail/**")
+  public String english() {
+    return "english";
   }
 
 }
