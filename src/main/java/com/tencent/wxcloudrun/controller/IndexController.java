@@ -42,9 +42,6 @@ public class IndexController {
     public void reviewPriceData(HttpServletResponse response) throws Exception {
         // 获取pdf文件路径（包括文件名）
         InputStream resourceAsStream = this.getClass().getResourceAsStream("/english.pdf");
-        // 设置输出的格式
-        response.setHeader("Content-Disposition", "inline;filename="
-                + "english.pdf");
         response.setHeader("Content-Type", "application/pdf");
         response.setHeader("X-Frame-Options", "ALLOWALL");
         OutputStream outputStream = response.getOutputStream();
