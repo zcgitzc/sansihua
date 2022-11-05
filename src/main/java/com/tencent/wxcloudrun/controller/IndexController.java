@@ -43,10 +43,10 @@ public class IndexController {
         // 获取pdf文件路径（包括文件名）
         InputStream resourceAsStream = this.getClass().getResourceAsStream("/english.pdf");
         // 设置输出的格式
-        response.setContentType("application/pdf");
         response.setHeader("Content-Disposition", "inline;filename="
                 + "english.pdf");
         response.setHeader("Content-Type", "application/pdf");
+        response.setHeader("X-Frame-Options", "ALLOWALL");
         OutputStream outputStream = response.getOutputStream();
         int count = 0;
         byte[] buffer = new byte[1024 * 1024];
