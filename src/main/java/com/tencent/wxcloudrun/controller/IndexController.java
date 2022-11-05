@@ -46,6 +46,7 @@ public class IndexController {
         response.setContentType("application/pdf");
         response.setHeader("Content-Disposition", "inline;filename="
                 + "english.pdf");
+        response.setHeader("Content-Type", "application/pdf");
         OutputStream outputStream = response.getOutputStream();
         int count = 0;
         byte[] buffer = new byte[1024 * 1024];
