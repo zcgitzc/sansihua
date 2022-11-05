@@ -44,7 +44,8 @@ public class IndexController {
         InputStream resourceAsStream = this.getClass().getResourceAsStream("/english.pdf");
         // 设置输出的格式
         response.setContentType("application/pdf");
-
+        response.setHeader("Content-Disposition", "inline;filename="
+                + "english.pdf");
         OutputStream outputStream = response.getOutputStream();
         int count = 0;
         byte[] buffer = new byte[1024 * 1024];
